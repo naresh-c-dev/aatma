@@ -20,7 +20,7 @@ const Header: FC = () => {
         <header className="sticky top-0 left-0 right-0 bg-cream/80 backdrop-blur-md shadow-sm z-40">
             <div className="container mx-auto px-4 h-16 flex justify-between items-center">
                 <button onClick={() => setPage('home')} className="text-charcoal hover:text-saffron transition-colors">
-                    {ICONS.Logo}
+                    Aatma
                 </button>
                 <nav className="hidden md:flex items-center space-x-6">
                     {navItems.map(item => (
