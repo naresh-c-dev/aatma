@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanatana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#FFF8F0',
+              saffron: '#E76F51',
+              spiritualGreen: '#2A9D8F',
+              divinePurple: '#8338EC',
+              gold: '#C9A035',
+              charcoal: '#2D3748',
+              warmGray: '#4A5568',
+              'neutral-100': '#F7FAFC',
+              'neutral-200': '#EDF2F7',
+              'neutral-300': '#E2E8F0',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Lora', 'serif'],
+              display: ['Playfair Display', 'serif'],
+              special: ['Cinzel', 'serif'],
+            },
+            boxShadow: {
+                'soft': '0 4px 15px rgba(0,0,0,0.05)',
+                'soft-hover': '0 6px 20px rgba(0,0,0,0.07)',
+            },
+            keyframes: {
+              rotate360: {
+                'from': { transform: 'rotate(0deg)' },
+                'to': { transform: 'rotate(360deg)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { opacity: 0.8, filter: 'drop-shadow(0 0 4px #E76F51)' },
+                '50%': { opacity: 1, filter: 'drop-shadow(0 0 8px #E76F51)' },
+              },
+              toastIn: {
+                'from': { transform: 'translateY(20px)', opacity: 0 },
+                'to': { transform: 'translateY(0)', opacity: 1 },
+              },
+              toastOut: {
+                'from': { transform: 'translateY(0)', opacity: 1 },
+                'to': { transform: 'translateY(20px)', opacity: 0 },
+              },
+              fadeInUp: {
+                'from': { opacity: 0, transform: 'translateY(10px)' },
+                'to': { opacity: 1, transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'spin-slow': 'rotate360 3s linear infinite',
+              pulseGlow: 'pulseGlow 2.5s ease-in-out infinite',
+              toastIn: 'toastIn 0.5s ease-out forwards',
+              toastOut: 'toastOut 0.5s ease-in forwards',
+              fadeInUp: 'fadeInUp 0.5s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* For custom scrollbars to maintain the aesthetic */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FFF8F0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #E2E8F0;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #E76F51;
+      }
+      .thumb-friendly-nav {
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+      }
+      body {
+        background-color: #FFF8F0;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E76F51' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cream text-charcoal font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
